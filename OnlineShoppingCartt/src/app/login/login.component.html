@@ -1,0 +1,22 @@
+<!-- login.component.html -->
+<button routerLink="registration" class="btn btn-success" style="margin-bottom:5px; 
+
+margin-left:1000px; 
+height: 50px;
+width:150px">Click Here To Register</button>
+<div class="login-container">
+  <h2>Login</h2>
+  <form (ngSubmit)="onLoginSubmit()">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="loginForm.username" required>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="loginForm.password" required>
+    </div>
+    <br>
+    <button type="submit">Login</button>
+  </form>
+</div>
+

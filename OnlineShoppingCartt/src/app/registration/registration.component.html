@@ -1,0 +1,348 @@
+<!-- <div class="registration-container">
+  <h2>Registration</h2>
+  <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+ 
+    <div class="form-group">
+      <label for="userName">User Name</label>
+      <input type="text" id="userName" name="userName" [(ngModel)]="user.userName" required>
+    </div>
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastName" [(ngModel)]="user.lastName" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+    </div>
+    <div class="form-group">
+      <label for="mobileNumber">Mobile Number</label>
+      <input type="text" id="mobileNumber" name="mobileNumber" [(ngModel)]="user.mobileNumber" required pattern="^[6-9]\d{9}$">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="user.email" required email>
+    </div>
+    <div class="form-group">
+      <label for="role">Role</label>
+      <input type="text" id="role" name="role" [(ngModel)]="user.role" required role>
+    </div>
+    
+    <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+  </form>
+</div> -->
+
+
+
+   
+<!--   
+      <div class="form-group">
+  <label for="userName">User Name</label>
+  <input
+          type="text"
+          id="userName"
+          name="userName"
+          [(ngModel)]="user.userName"
+          required
+          (blur)="validateUserName()"
+  >
+  <div *ngIf="userNameError" class="error">{{ userNameError }}</div>
+  </div>
+  
+   
+  
+      <div class="form-group">
+  <label for="firstName">First Name</label>
+  <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          [(ngModel)]="user.firstName"
+          required
+          (blur)="validateFirstName()"
+  >
+  <div *ngIf="firstNameError" class="error">{{ firstNameError }}</div>
+  </div>
+  
+   
+  
+      <div class="form-group">
+  <label for="lastName">Last Name</label>
+  <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          [(ngModel)]="user.lastName"
+          required
+          (blur)="validateLastName()"
+  >
+  <div *ngIf="lastNameError" class="error">{{ lastNameError }}</div>
+  </div>
+  
+   
+  
+      <div class="form-group">
+  <label for="password">Password</label>
+  <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="user.password"
+          required
+          (blur)="validatePassword()"
+  >
+  <div *ngIf="passwordError" class="error">{{ passwordError }}</div>
+  </div>
+  
+   
+  
+      <div class="form-group">
+  <label for="mobileNumber">Mobile Number</label>
+  <input
+          type="text"
+          id="mobileNumber"
+          name="mobileNumber"
+          [(ngModel)]="user.mobileNumber"
+          required
+          pattern="^[6-9]\d{9}$"
+          (blur)="validateMobileNumber()"
+  >
+  <div *ngIf="mobileNumberError" class="error">{{ mobileNumberError }}</div>
+  </div>
+  
+   
+  
+      <div class="form-group">
+  <label for="email">Email</label>
+  <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="user.email"
+          required
+          email
+          (blur)="validateEmail()"
+  >
+  <div *ngIf="emailError" class="error">{{ emailError }}</div>
+  </div>
+  
+   
+  
+      <div class="form-group">
+  <label for="role">Role</label>
+  <input
+          type="text"
+          id="role"
+          name="role"
+          [(ngModel)]="user.role"
+          required
+          (blur)="validateRole()"
+  >
+  <div *ngIf="roleError" class="error">{{ roleError }}</div>
+  </div>
+  
+   
+  
+      <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+  </form>
+  </div> -->
+  
+
+  <div class="registration-container">
+
+    <form #registrationForm="ngForm" (ngSubmit)="onSubmit()">
+  
+      <div class="form-group">
+  
+        <label for="userName">User Name</label>
+  
+        <input
+  
+          type="text"
+  
+          id="userName"
+  
+          name="userName"
+  
+          [(ngModel)]="user.userName"
+  
+          required
+  
+          (blur)="validateUserName()"
+  
+        >
+  
+        <div *ngIf="userNameError" class="error">{{ userNameError }}</div>
+  
+      </div>
+  
+   
+  
+      <div class="form-group">
+  
+        <label for="firstName">First Name</label>
+  
+        <input
+  
+          type="text"
+  
+          id="firstName"
+  
+          name="firstName"
+  
+          [(ngModel)]="user.firstName"
+  
+          required
+  
+          (blur)="validateFirstName()"
+  
+        >
+  
+        <div *ngIf="firstNameError" class="error">{{ firstNameError }}</div>
+  
+      </div>
+  
+   
+  
+      <div class="form-group">
+  
+        <label for="lastName">Last Name</label>
+  
+        <input
+  
+          type="text"
+  
+          id="lastName"
+  
+          name="lastName"
+  
+          [(ngModel)]="user.lastName"
+  
+          required
+  
+          (blur)="validateLastName()"
+  
+        >
+  
+        <div *ngIf="lastNameError" class="error">{{ lastNameError }}</div>
+  
+      </div>
+  
+   
+  
+      <div class="form-group">
+  
+        <label for="password">Password</label>
+  
+        <input
+  
+          type="password"
+  
+          id="password"
+  
+          name="password"
+  
+          [(ngModel)]="user.password"
+  
+          required
+  
+          (blur)="validatePassword()"
+  
+        >
+  
+        <div *ngIf="passwordError" class="error">{{ passwordError }}</div>
+  
+      </div>
+  
+   
+  
+      <div class="form-group">
+  
+        <label for="mobileNumber">Mobile Number</label>
+  
+        <input
+  
+          type="text"
+  
+          id="mobileNumber"
+  
+          name="mobileNumber"
+  
+          [(ngModel)]="user.mobileNumber"
+  
+          required
+  
+          pattern="^[6-9]\d{9}$"
+  
+          (blur)="validateMobileNumber()"
+  
+        >
+  
+        <div *ngIf="mobileNumberError" class="error">{{ mobileNumberError }}</div>
+  
+      </div>
+  
+   
+  
+      <div class="form-group">
+  
+        <label for="email">Email</label>
+  
+        <input
+  
+          type="email"
+  
+          id="email"
+  
+          name="email"
+  
+          [(ngModel)]="user.email"
+  
+          required
+  
+          email
+  
+          (blur)="validateEmail()"
+  
+        >
+  
+        <div *ngIf="emailError" class="error">{{ emailError }}</div>
+  
+      </div>
+  
+   
+  
+      <div class="form-group">
+  
+        <label for="role">Role</label>
+  
+        <input
+  
+          type="text"
+  
+          id="role"
+  
+          name="role"
+  
+          [(ngModel)]="user.role"
+  
+          required
+  
+          (blur)="validateRole()"
+  
+        >
+  
+        <div *ngIf="roleError" class="error">{{ roleError }}</div>
+  
+      </div>
+  
+   
+  
+      <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+  
+    </form>
+  
+   

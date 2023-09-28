@@ -1,0 +1,15 @@
+/* Custom CSS for product cards */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+/* Custom CSS for product cards */
+.custom-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* Ensure cards display horizontally */
+}
+
+
+.product-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
