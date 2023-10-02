@@ -170,6 +170,7 @@
 
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -185,7 +186,7 @@ export class RegistrationComponent {
     password: '',
     mobileNumber: '',
     email: '',
-    role: ''
+    role: 'ROLE_CUSTOMER'
   };
 
   // Add error variables for each field
@@ -198,7 +199,7 @@ export class RegistrationComponent {
   emailError: string | null = null;
   roleError: string | null = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private router:Router) {}
 
   // Validation function for Login ID
   // validateLoginId(): void {
@@ -283,10 +284,13 @@ export class RegistrationComponent {
     // Replace 'http://localhost:9090/register' with your actual backend endpoint
     this.http.post('http://localhost:9090/register', this.user).subscribe(
       (response) => {
+        alert('Registration successful');
         console.log('Registration successful', response);
+        this.router.navigate(['/']);
         // Optionally, you can redirect to a success page or show a success message.
       },
       (error) => {
+        alert(error.error.message)
         console.error('Registration failed', error);
         // Handle registration failure, show an error message, etc.
       }
