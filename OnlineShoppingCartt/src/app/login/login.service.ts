@@ -22,7 +22,7 @@ export class LoginService {
         .subscribe(
 
           jwtToken =>{
-            console.log(jwtToken);
+            // console.log(jwtToken);
             this.jwtService.setToken(jwtToken.accessToken);
             this.localStorageService.set('jwt',jwtToken.accessToken);
             this.localStorageService.set('role',jwtToken.roles[0]);

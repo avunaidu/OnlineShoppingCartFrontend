@@ -18,17 +18,18 @@ export class CustomerAddressComponent{
 
   paymentMode = "COD";
   
-  transaction:Transaction = {
-    transactionId: 0,
-    cartId: 0,
-    userName: '',
-    amount: 0,
-    transactionStatus: '',
-    paymentMode: ''
-  }
+  transaction:Transaction 
 
   constructor(private homeService:HomeService,private router:Router,private cart:CartComponent,private jwt:JwtServiceService){
     this.getAllAddresses()
+    this.transaction =  {
+      transactionId: 0,
+      cartId: 0,
+      userName: '',
+      amount: 0,
+      transactionStatus: '',
+      paymentMode: ''
+    }
   }
 
  
